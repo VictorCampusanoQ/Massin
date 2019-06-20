@@ -113,7 +113,7 @@
 }
 
 .social-link.twitter {
-  background-image: url('assets/sociales/twitter-dark.svg');
+  background-image: url('assets/sociales/linkedin-dark.svg');
 }
 .social-link.facebook {
   background-image: url('assets/sociales/facebook-dark.svg');
@@ -124,7 +124,12 @@
 .social-link.instagram {
   background-image: url('assets/sociales/instagram-dark.svg');
 }
-
+.social-link.mapa {
+  background-image: url('assets/sociales/map-marked.svg');
+}
+.social-link.correo {
+  background-image: url('assets/sociales/correo.svg');
+}
 
 .form-email input {
   border-color: gray;
@@ -174,6 +179,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   color: white;
+
 }
 
 #footer a {
