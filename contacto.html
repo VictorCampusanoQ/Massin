@@ -8,14 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
     <title>MASSIN</title>
 
   </head>
   <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!-- Header -->
     
-    <nav id="header" class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd;">
+    <nav id="header" class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ecf5fbfa;">
         <div class="container" id="barra">
           <a class="navbar-brand" href="index.html">
             <img src="assets/images/logo-masin.png" alt="Massin logo">
@@ -60,28 +61,34 @@
     <section class="container-flex pt-4 pb-4" id="mapa">
       <div class="container">
         <div class="card mb-3" >
-          <div class="row no-gutters" style="background-color: #e3f2fd;">
-            <div class="col-md-4 col-lg-7">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.2495840995743!2d-71.26794427903275!3d-29.958746687094408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691cbe5f266d247%3A0xb59f6d708f74894e!2sMASSIN+SPA!5e0!3m2!1ses-419!2scl!4v1560824272290!5m2!1ses-419!2scl" width="600" height="450" frameborder="2" style="border:0" allowfullscreen></iframe>
+          <div class="row no-gutters rounded" style="background-color: #ecf5fbfa;">
+            <div class="col-md-4 col-lg-7 pt-4 pl-4">
+              <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.2495840995743!2d-71.26794427903275!3d-29.958746687094408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691cbe5f266d247%3A0xb59f6d708f74894e!2sMASSIN+SPA!5e0!3m2!1ses-419!2scl!4v1560824272290!5m2!1ses-419!2scl" width="600" height="450" frameborder="2" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-md-8 col-lg-5">
-              <div class="card-body text-right">
-                <h5 class="card-title pt-4">MASSIN SPA.</h5>
-                <p class="card-text">RUTA D43 271 G12 BARRIO INDUSTRIAL PUERTO SECO, COQUIMBO.</p>
-                
-                 <div class="pt-4 text-right">
-                  <div class="row ">
-                    <div class="col-12 text-right">
-                      <img src="assets/images/massin300.png" alt="Massin logo">
-                    </div>  
+              <div class="card-body border bg-secondary text-light rounded">
+                <h5 class="card-title">Formulario de Contácto</h5>
+                <form action="enviar.php" method="post" class="form_contact">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="names" name="nombre" required>
                   </div>
-                  <div class="row ">
-                    <div class="col-12 text-right pt-4">
-                      <img src="assets/images/HardoxLogoSF.png" alt="...">
-                    </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Télefono / Celular</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Télefono" id="phone" name="telefono">
                   </div>
-                </div>
-                <p class="card-text pt-4"><strong class="text-dark"></strong></p>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo Electronico" id="email" name="correo" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Mensaje</label>
+                    <textarea class="form-control" rows="3" id="mensaje" name="mensaje" required></textarea>
+                  </div>
+                  <button class="btn btn-primary" type="submit" value="Enviar Mensaje" id="btnSend">Enviar</button>
+                </form>
+                 
+                <p class="card-text"><strong class="text-dark"></strong></p>
               </div>
             </div>
           </div>
@@ -91,7 +98,7 @@
     </section>
     <!-- /map -->
     <!-- Footer -->
-    <footer id="pie" class=" footer" style="background-color: #e3f2fd;">
+    <footer id="pie" class=" footer" style="background-color: #ecf5fbfa;">
       <div class="container-fluid">
 
         <div class="row ">
